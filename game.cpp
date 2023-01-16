@@ -77,7 +77,6 @@ void Game::onFieldClicked(int index)
 {
     if(m_fields[index]>-1 || m_gameFinished==true) return;
 
-    qDebug() << "onFieldClicked: " << index;
     m_fields[index] = currentPlayer;
     m_sources[index] = playerImage[currentPlayer];
     emit counterChanged(m_fields);
@@ -97,16 +96,12 @@ void Game::onFieldClicked(int index)
             emit counterChanged(m_fields);
             emit resultChanged(m_gameResult);
             emit gameFinishedChanged(m_gameFinished);
-           // onStartGame();
 
     } else {
-
         qDebug() << "GRA TRWA";
     }
 
 }
-
-
 
 QVector<int> Game::getWinnerArray()
 {
@@ -153,9 +148,9 @@ bool Game::isGameFinished()
             m_fields[winS[0]]!=-1 ) {
 
             if(m_fields[winS[0]]==0) {
-                m_gameResult = "Player 1 win";
+                m_gameResult = "Player 1 wins";
             } else {
-                m_gameResult = "Player 2 win";
+                m_gameResult = "Player 2 wins";
             }
             m_gameFinished=true;
             return true;
