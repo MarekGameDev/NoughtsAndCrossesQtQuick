@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>GameField.qml</file>
+        <file>assets/circle.gif</file>
+        <file>assets/cross.gif</file>
+        <file>assets/o.png</file>
+        <file>assets/x.png</file>
+    </qresource>
+</RCC>
